@@ -10,4 +10,10 @@ blocks:
       jobs:
         - name: bundle install
           commands:
-            - bundle install
+            - bundle install --path vendor/bundle
+  - name: Tests
+    task:
+      jobs:
+        - name: rspec
+          commands:
+            - bundle exec rspec
